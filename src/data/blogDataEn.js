@@ -56,7 +56,7 @@ const rawPostsEn = [
 </ul>
 
 <h2>Request a Diesel Quote Today</h2>
-<p>Need diesel delivered tonight? Our dispatch team is on standby 24/7. Contact us via WhatsApp at <strong>+971 54 409 9266</strong> for the fastest quote and delivery in the UAE.</p>
+<p>Need diesel delivered tonight? Our dispatch team is on standby 24/7. Contact us via WhatsApp at <strong>+971 55 567 7114</strong> for the fastest quote and delivery in the UAE.</p>
 `,
   },
   {
@@ -97,7 +97,7 @@ const rawPostsEn = [
 </ol>
 
 <h2>Get Today's Diesel Quote</h2>
-<p>Contact ALRAAD ALTHAQEB at <strong>+971 54 409 9266</strong> for today's industrial diesel rate in Dubai and the UAE.</p>
+<p>Contact ALRAAD ALTHAQEB at <strong>+971 55 567 7114</strong> for today's industrial diesel rate in Dubai and the UAE.</p>
 `,
   },
   {
@@ -112,7 +112,8 @@ const rawPostsEn = [
       "On-site diesel refueling for construction projects in Dubai. Keep excavators, cranes, generators and bowsers running without downtime. Contact us 24/7.",
     keywords:
       "construction diesel dubai, on-site diesel delivery, excavator fuel supply UAE, contractor diesel dubai",
-    excerpt: "On-site diesel for construction projects — keep your equipment running without delays.",
+    excerpt:
+      "On-site diesel for construction projects — keep your equipment running without delays.",
     imageAlt: "Diesel tanker refueling heavy equipment on a Dubai construction site",
     category: "construction",
     type: "article",
@@ -141,7 +142,7 @@ const rawPostsEn = [
 <p>All our drivers carry UAE Civil Defence training certificates. Tankers carry fire extinguishers, spill kits and grounding cables to prevent static discharge during transfer.</p>
 
 <h2>Get Construction Diesel Service</h2>
-<p>Whether you're building in Business Bay, Dubai Hills or Expo City Dubai, we deliver diesel to your site on time. Call <strong>+971 54 409 9266</strong>.</p>
+<p>Whether you're building in Business Bay, Dubai Hills or Expo City Dubai, we deliver diesel to your site on time. Call <strong>+971 55 567 7114</strong>.</p>
 `,
   },
   {
@@ -154,8 +155,10 @@ const rawPostsEn = [
     datePublished: "2026-03-27",
     metaDescription:
       "Industrial bulk diesel supply for factories across Dubai, Sharjah and Abu Dhabi. Scheduled deliveries, calibrated meters, and 10ppm low-sulfur fuel.",
-    keywords: "bulk diesel UAE, industrial diesel supply, factory fuel dubai, manufacturing diesel UAE",
-    excerpt: "Scheduled bulk diesel deliveries for UAE manufacturers — reliable, metered and 10ppm certified.",
+    keywords:
+      "bulk diesel UAE, industrial diesel supply, factory fuel dubai, manufacturing diesel UAE",
+    excerpt:
+      "Scheduled bulk diesel deliveries for UAE manufacturers — reliable, metered and 10ppm certified.",
     imageAlt: "Bulk diesel tanker delivering industrial fuel to a UAE factory",
     category: "supply",
     type: "article",
@@ -179,7 +182,7 @@ const rawPostsEn = [
 <p>Every delivery is accompanied by a quality certificate confirming 10ppm sulfur compliance. We also offer optional on-site fuel sampling and laboratory analysis for sensitive applications.</p>
 
 <h2>Schedule Your Industrial Diesel Supply</h2>
-<p>Switch to a reliable industrial diesel partner. WhatsApp <strong>+971 54 409 9266</strong> for a tailored bulk supply contract.</p>
+<p>Switch to a reliable industrial diesel partner. WhatsApp <strong>+971 55 567 7114</strong> for a tailored bulk supply contract.</p>
 `,
   },
   {
@@ -204,7 +207,7 @@ const rawPostsEn = [
 
 <h2>How Emergency Diesel Delivery Works</h2>
 <ol>
-<li><strong>Call or WhatsApp</strong> <strong>+971 54 409 9266</strong> with your location and required volume.</li>
+<li><strong>Call or WhatsApp</strong> <strong>+971 54 55 567 7114</strong> with your location and required volume.</li>
 <li><strong>Dispatch confirmation</strong> within minutes, with ETA and tanker details.</li>
 <li><strong>On-site delivery</strong> with calibrated metering and signed delivery note.</li>
 </ol>
@@ -232,7 +235,8 @@ const rawPostsEn = [
     datePublished: "2026-03-25",
     metaDescription:
       "Lower fleet fuel costs with on-site diesel delivery in the UAE. Eliminate retail station detours, get calibrated meters, and gain transparent reporting.",
-    keywords: "fleet diesel UAE, logistics fuel dubai, transport diesel supply, fuel management UAE",
+    keywords:
+      "fleet diesel UAE, logistics fuel dubai, transport diesel supply, fuel management UAE",
     excerpt: "On-site diesel for transport fleets — reduce detours, downtime and fuel costs.",
     imageAlt: "Diesel bowser refueling a logistics truck fleet in a UAE depot",
     category: "supply",
@@ -258,7 +262,7 @@ const rawPostsEn = [
 </ol>
 
 <h2>Get a Fleet Diesel Proposal</h2>
-<p>WhatsApp <strong>+971 54 409 9266</strong> for a tailored fleet refueling proposal.</p>
+<p>WhatsApp <strong>+971 55 567 7114</strong> for a tailored fleet refueling proposal.</p>
 `,
   },
   {
@@ -271,7 +275,8 @@ const rawPostsEn = [
     datePublished: "2026-03-24",
     metaDescription:
       "Reliable generator diesel supply for events, construction sites and backup power systems in Dubai. 24/7 dispatch and certified 10ppm fuel.",
-    keywords: "generator diesel dubai, event fuel supply UAE, backup power diesel, genset fuel dubai",
+    keywords:
+      "generator diesel dubai, event fuel supply UAE, backup power diesel, genset fuel dubai",
     excerpt: "Diesel for generators powering events, construction and backup systems across Dubai.",
     imageAlt: "Diesel generator being refueled at a Dubai outdoor event",
     category: "supply",
@@ -298,7 +303,7 @@ const rawPostsEn = [
 </ol>
 
 <h2>Order Generator Diesel</h2>
-<p>WhatsApp <strong>+971 54 409 9266</strong> with your genset capacity, runtime and location.</p>
+<p>WhatsApp <strong>+971 55 567 7114</strong> with your genset capacity, runtime and location.</p>
 `,
   },
   {
@@ -343,7 +348,7 @@ const rawPostsEn = [
 </ul>
 
 <h2>Work With ALRAAD ALTHAQEB</h2>
-<p>We meet every item on this checklist and document it for our customers. WhatsApp <strong>+971 54 409 9266</strong> to start.</p>
+<p>We meet every item on this checklist and document it for our customers. WhatsApp <strong>+971 55 567 7114</strong> to start.</p>
 `,
   },
   {
@@ -357,7 +362,8 @@ const rawPostsEn = [
     metaDescription:
       "Safe diesel storage in the UAE — tank specifications, Civil Defence requirements, bunding, ventilation and inspection schedules for industrial users.",
     keywords: "diesel storage UAE, fuel tank safety dubai, civil defence diesel, bunded tank UAE",
-    excerpt: "Diesel storage best practices for UAE businesses — keep your fuel safe, compliant and uncontaminated.",
+    excerpt:
+      "Diesel storage best practices for UAE businesses — keep your fuel safe, compliant and uncontaminated.",
     imageAlt: "Properly bunded diesel storage tank at a UAE industrial site",
     category: "guides",
     type: "article",
@@ -391,7 +397,7 @@ const rawPostsEn = [
 </ol>
 
 <h2>Need Help With Storage?</h2>
-<p>We advise customers on tank sizing and Civil Defence compliance. WhatsApp <strong>+971 54 409 9266</strong>.</p>
+<p>We advise customers on tank sizing and Civil Defence compliance. WhatsApp <strong>+971 55 567 7114</strong>.</p>
 `,
   },
   {
@@ -405,7 +411,8 @@ const rawPostsEn = [
     metaDescription:
       "Comparing diesel and petrol in the UAE — fuel economy, cost per kilometer, engine longevity and which fuel suits commercial fleets, generators and equipment.",
     keywords: "diesel vs petrol UAE, fuel comparison dubai, diesel economy UAE",
-    excerpt: "Should your business run on diesel or petrol? A practical comparison for UAE operators.",
+    excerpt:
+      "Should your business run on diesel or petrol? A practical comparison for UAE operators.",
     imageAlt: "Diesel and petrol pumps at a UAE fuel station for comparison",
     category: "prices",
     type: "article",
@@ -433,7 +440,7 @@ const rawPostsEn = [
 </ul>
 
 <h2>Talk to Us About Diesel Supply</h2>
-<p>WhatsApp <strong>+971 54 409 9266</strong> for industrial diesel supply across the UAE.</p>
+<p>WhatsApp <strong>+971 55 567 7114</strong> for industrial diesel supply across the UAE.</p>
 `,
   },
   {
@@ -479,7 +486,7 @@ const rawPostsEn = [
 </ul>
 
 <h2>Order Certified 10ppm Diesel</h2>
-<p>All deliveries from ALRAAD ALTHAQEB are certified 10ppm. WhatsApp <strong>+971 54 409 9266</strong>.</p>
+<p>All deliveries from ALRAAD ALTHAQEB are certified 10ppm. WhatsApp <strong>+971 55 567 7114</strong>.</p>
 `,
   },
   {
@@ -493,7 +500,8 @@ const rawPostsEn = [
     metaDescription:
       "UAE winter diesel preparation tips — fuel additives, cold flow performance, water management and equipment checks for inland and mountain operations.",
     keywords: "winter diesel UAE, cold weather diesel dubai, diesel additive UAE",
-    excerpt: "Even the UAE gets cold mornings — prep your diesel and equipment for winter operations.",
+    excerpt:
+      "Even the UAE gets cold mornings — prep your diesel and equipment for winter operations.",
     imageAlt: "Diesel-powered equipment operating in cool UAE winter morning",
     category: "guides",
     type: "article",
@@ -521,7 +529,7 @@ const rawPostsEn = [
 </ol>
 
 <h2>Need Diesel This Winter?</h2>
-<p>WhatsApp <strong>+971 54 409 9266</strong> for reliable supply across the UAE.</p>
+<p>WhatsApp <strong>+971 55 567 7114</strong> for reliable supply across the UAE.</p>
 `,
   },
   {
@@ -558,7 +566,7 @@ const rawPostsEn = [
 <p>Track liters per 100km per truck and per driver. Investigate outliers monthly.</p>
 
 <h2>Reduce Your Fleet's Fuel Spend</h2>
-<p>WhatsApp <strong>+971 54 409 9266</strong> for a fleet diesel consultation.</p>
+<p>WhatsApp <strong>+971 54 55 567 7114</strong> for a fleet diesel consultation.</p>
 `,
   },
   {
@@ -572,7 +580,8 @@ const rawPostsEn = [
     metaDescription:
       "Diesel generator maintenance for harsh UAE conditions — heat, dust, humidity. Schedule, checks and fuel quality recommendations.",
     keywords: "generator maintenance UAE, diesel genset dubai, generator service UAE",
-    excerpt: "Keep your backup generator ready for the next outage — UAE-specific maintenance schedule.",
+    excerpt:
+      "Keep your backup generator ready for the next outage — UAE-specific maintenance schedule.",
     imageAlt: "Engineer servicing a diesel generator in a UAE industrial facility",
     category: "guides",
     type: "article",
@@ -600,7 +609,7 @@ const rawPostsEn = [
 </ul>
 
 <h2>Pair Maintenance With Reliable Diesel Supply</h2>
-<p>WhatsApp <strong>+971 54 409 9266</strong>.</p>
+<p>WhatsApp <strong>+971 55 567 7114</strong>.</p>
 `,
   },
   {
@@ -639,7 +648,7 @@ const rawPostsEn = [
 </ol>
 
 <h2>Start With the Biggest Lever</h2>
-<p>For fleets, that's driver training. For backup power, it's right-sizing. WhatsApp <strong>+971 54 409 9266</strong> for help analyzing your consumption.</p>
+<p>For fleets, that's driver training. For backup power, it's right-sizing. WhatsApp <strong>+971 55 567 7114</strong> for help analyzing your consumption.</p>
 `,
   },
 ];

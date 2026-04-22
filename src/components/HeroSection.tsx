@@ -78,7 +78,7 @@ const HeroSection = () => {
             </button>
 
             <a
-              href="https://wa.me/971544099266?text=مرحبًا، أريد عرض سعر لتوريد الديزل"
+              href="https://wa.me/971555677114?text=مرحبًا، أريد عرض سعر لتوريد الديزل"
               target="_blank"
               rel="noopener noreferrer"
               className="w-[220px] sm:w-[230px] md:w-[250px] mx-auto sm:mx-0 px-3 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm sm:text-base md:text-lg shadow-lg transition-all duration-300 ease-out
@@ -91,7 +91,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="tel:+971544099266"
+              href="tel:+971555677114"
               className="w-[220px] sm:w-[230px] md:w-[250px] mx-auto sm:mx-0 px-3 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm sm:text-base md:text-lg shadow-md transition-all duration-300 ease-out 
                bg-white/95 text-[#0f172a] border border-white/20
                hover:bg-white hover:scale-[1.03] hover:shadow-xl active:scale-[0.98]
@@ -104,30 +104,22 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap justify-center gap-9 mt-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-6 max-w-xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-gold">
-                24/7
-              </div>
+              <div className="text-2xl md:text-3xl font-bold text-gold">24/7</div>
               <div className="text-sm text-slate-300">دعم العملاء</div>
             </div>
 
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-gold">
-                98%
-              </div>
+              <div className="text-2xl md:text-3xl font-bold text-gold">98%</div>
               <div className="text-sm text-slate-300">معدل الرضا</div>
             </div>
 
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-gold">
-                +10,000
-              </div>
+              <div className="text-2xl md:text-3xl font-bold text-gold">+10,000</div>
               <div className="text-sm text-slate-300">عملية توصيل</div>
             </div>
 
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-gold">
-                +500
-              </div>
+              <div className="text-2xl md:text-3xl font-bold text-gold">+500</div>
               <div className="text-sm text-slate-300">عميل راضٍ</div>
             </div>
           </div>

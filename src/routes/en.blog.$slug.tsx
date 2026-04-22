@@ -6,7 +6,10 @@ import { MessageCircle, ArrowLeft, Clock, Fuel } from "lucide-react";
 const SITE_URL = "https://www.alraad-althaqeb.com";
 
 function stripHtml(html = "") {
-  return html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function readingTime(content = "") {
@@ -140,10 +143,12 @@ function PostEn() {
                   <h3 className="text-2xl md:text-3xl font-bold mb-2 text-[hsl(var(--gold))]">
                     Need Diesel Supply in the UAE?
                   </h3>
-                  <p className="text-white/80">Premium 10ppm diesel delivered 24/7 across the Emirates.</p>
+                  <p className="text-white/80">
+                    Premium 10ppm diesel delivered 24/7 across the Emirates.
+                  </p>
                 </div>
                 <a
-                  href="https://wa.me/971544099266?text=Hi, I would like a diesel supply quote"
+                  href="https://wa.me/971555677114?text=Hi, I would like a diesel supply quote"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-[hsl(var(--gold))] hover:bg-white text-primary-dark px-8 py-4 rounded-full font-black transition-all hover:scale-105 shadow-xl flex items-center gap-3"
@@ -155,7 +160,9 @@ function PostEn() {
 
             {related.length > 0 && (
               <div className="mt-16">
-                <h3 className="text-2xl md:text-3xl font-black text-primary mb-8">Related Articles</h3>
+                <h3 className="text-2xl md:text-3xl font-black text-primary mb-8">
+                  Related Articles
+                </h3>
                 <div className="grid gap-6 md:grid-cols-3">
                   {related.map((r) => (
                     <Link

@@ -6,7 +6,10 @@ import { MessageCircle, ArrowRight, Clock, Fuel, ChevronLeft } from "lucide-reac
 const SITE_URL = "https://www.alraad-althaqeb.com";
 
 function stripHtml(html: string = "") {
-  return html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function calculateReadingTime(content: string = "") {
@@ -15,10 +18,15 @@ function calculateReadingTime(content: string = "") {
   return `${minutes} ${minutes === 1 ? "دقيقة قراءة" : "دقائق قراءة"}`;
 }
 
-function buildMetaDescription(post: { metaDescription?: string; excerpt?: string; content?: string }) {
+function buildMetaDescription(post: {
+  metaDescription?: string;
+  excerpt?: string;
+  content?: string;
+}) {
   if (post.metaDescription && post.metaDescription.trim() !== "") return post.metaDescription;
   const plainText = stripHtml(post.content || "");
-  const baseText = post.excerpt && post.excerpt.length > 50 ? post.excerpt : plainText.substring(0, 150);
+  const baseText =
+    post.excerpt && post.excerpt.length > 50 ? post.excerpt : plainText.substring(0, 150);
   return `${baseText.substring(0, 155)}... | الرعد الثاقب`;
 }
 
@@ -90,7 +98,10 @@ export const Route = createFileRoute("/blog/$slug")({
     };
   },
   notFoundComponent: () => (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4 pt-16" dir="rtl">
+    <div
+      className="min-h-screen bg-background flex items-center justify-center px-4 pt-16"
+      dir="rtl"
+    >
       <div className="text-center bg-card border border-border rounded-3xl p-10 shadow-xl max-w-xl w-full">
         <h2 className="text-3xl font-black text-primary mb-4">المقال غير موجود</h2>
         <p className="text-muted-foreground mb-6">يبدو أن الرابط غير صحيح أو أن المقال تم نقله.</p>
@@ -196,11 +207,16 @@ function BlogPostPage() {
             {post.excerpt && (
               <div className="mb-10 rounded-2xl border border-[hsl(var(--gold))]/20 bg-[hsl(var(--gold))]/5 p-6 md:p-8">
                 <h2 className="text-xl md:text-2xl font-black text-primary mb-3">ملخص سريع</h2>
-                <p className="text-muted-foreground leading-8 text-base md:text-lg">{post.excerpt}</p>
+                <p className="text-muted-foreground leading-8 text-base md:text-lg">
+                  {post.excerpt}
+                </p>
               </div>
             )}
 
-            <div className="prose-blog max-w-none" dangerouslySetInnerHTML={{ __html: post.content || "" }} />
+            <div
+              className="prose-blog max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.content || "" }}
+            />
 
             {/* CTA */}
             <div className="mt-16 bg-[hsl(var(--primary-dark))] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
@@ -215,7 +231,7 @@ function BlogPostPage() {
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/971544099266?text=مرحبًا، أريد عرض سعر لتوريد الديزل"
+                  href="https://wa.me/971555677114?text=مرحبًا، أريد عرض سعر لتوريد الديزل"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-[hsl(var(--gold))] hover:bg-white text-primary-dark px-8 py-4 rounded-full font-black text-base md:text-lg transition-all transform hover:scale-105 shadow-xl flex items-center gap-3"
@@ -238,7 +254,10 @@ function BlogPostPage() {
                       اقرأ أيضًا موضوعات قريبة من هذا المقال لزيادة الفائدة.
                     </p>
                   </div>
-                  <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-black hover:text-accent transition">
+                  <Link
+                    to="/blog"
+                    className="inline-flex items-center gap-2 text-primary font-black hover:text-accent transition"
+                  >
                     عرض كل المقالات
                     <ChevronLeft className="h-4 w-4" />
                   </Link>
@@ -292,7 +311,9 @@ function BlogPostPage() {
                     params={{ slug: prevPost.slug }}
                     className="group bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition"
                   >
-                    <span className="text-sm text-muted-foreground block mb-2">→ المقال السابق</span>
+                    <span className="text-sm text-muted-foreground block mb-2">
+                      → المقال السابق
+                    </span>
                     <h4 className="font-bold text-lg group-hover:text-primary transition">
                       {prevPost.title}
                     </h4>
@@ -304,7 +325,9 @@ function BlogPostPage() {
                     params={{ slug: nextPost.slug }}
                     className="group bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition"
                   >
-                    <span className="text-sm text-muted-foreground block mb-2">المقال التالي ←</span>
+                    <span className="text-sm text-muted-foreground block mb-2">
+                      المقال التالي ←
+                    </span>
                     <h4 className="font-bold text-lg group-hover:text-primary transition">
                       {nextPost.title}
                     </h4>
@@ -315,12 +338,15 @@ function BlogPostPage() {
 
             {/* Bottom navigation */}
             <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-              <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-black hover:text-accent transition">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 text-primary font-black hover:text-accent transition"
+              >
                 <ArrowRight className="h-4 w-4" />
                 العودة إلى كل المقالات
               </Link>
               <a
-                href="https://wa.me/971544099266?text=مرحبًا، أريد الاستفسار عن توريد الديزل"
+                href="https://wa.me/971555677114?text=مرحبًا، أريد الاستفسار عن توريد الديزل"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-black transition-all"
