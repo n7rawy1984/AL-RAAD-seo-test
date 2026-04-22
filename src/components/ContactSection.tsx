@@ -123,21 +123,20 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* LEFT SIDE */}
+        {/* LEFT */}
         <div className="space-y-8 animate-slide-in-left">
           {/* WhatsApp */}
           <a
             href="https://wa.me/971555677114"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 bg-gradient-to-b from-[#ffb347] to-[#ffcc33] text-[#1e293b] py-4 rounded-2xl font-bold text-lg shadow-md transition-all duration-300 hover:scale-[1.02]"
+            className="flex items-center justify-center gap-3 bg-gradient-to-b from-[#ffb347] to-[#ffcc33] text-[#1e293b] py-4 rounded-2xl font-bold text-lg shadow-md hover:scale-[1.02]"
           >
             <MessageCircle className="h-6 w-6" />
             {t("تواصل واتساب الآن", "Chat on WhatsApp Now")}
           </a>
 
           <div className="space-y-4">
-            {/* Phone */}
             <a href="tel:+971555677114" className="flex items-start gap-4 p-4 bg-card rounded-lg">
               <Phone className="h-6 w-6 text-[#ffcc33]" />
               <div>
@@ -146,7 +145,6 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
               </div>
             </a>
 
-            {/* Email */}
             <a
               href="mailto:alraad247@gmail.com"
               className="flex items-start gap-4 p-4 bg-card rounded-lg"
@@ -158,7 +156,6 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
               </div>
             </a>
 
-            {/* Address */}
             <div className="flex items-start gap-4 p-4 bg-card rounded-lg">
               <MapPin className="h-6 w-6 text-[#ffcc33]" />
               <div>
@@ -167,7 +164,6 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
               </div>
             </div>
 
-            {/* Facebook */}
             <a
               href="https://www.facebook.com/alraad.diesel/"
               target="_blank"
@@ -181,7 +177,6 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
               </div>
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/ahmed-alraad-209157401/"
               target="_blank"
@@ -195,24 +190,24 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
               </div>
             </a>
 
-            {/* Instagram */}
             <a
               href="https://www.instagram.com/alraadalthaqeb/?hl=ar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 bg-card rounded-lg border border-transparent hover:border-[#ffcc33]/30 transition-colors group"
+              className="flex items-center gap-4 p-4 bg-card rounded-lg"
             >
               <Instagram className="h-6 w-6 text-[#ffcc33]" />
               <div>
-                <h4 className="font-bold text-primary">Instagram</h4>
-                <p className="group-hover:text-[#ffcc33] transition-colors">alraadalthaqeb</p>
+                <h4>Instagram</h4>
+                <p>alraadalthaqeb</p>
               </div>
             </a>
           </div>
         </div>
 
-        {/* RIGHT SIDE - FORM */}
+        {/* RIGHT */}
         <div className="animate-slide-in-right space-y-6">
+          {/* FORM */}
           <form
             onSubmit={handleSubmit}
             className="bg-card rounded-2xl p-8 shadow-lg border border-white/5 space-y-6"
@@ -267,7 +262,7 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
             <Button
               type="submit"
               disabled={loading}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-b from-[#ffb347] to-[#ffcc33] text-[#1e293b] font-bold py-7 rounded-2xl text-lg"
+              className="w-full bg-gradient-to-b from-[#ffb347] to-[#ffcc33] text-[#1e293b] font-bold py-6 rounded-2xl"
             >
               <Send className="h-5 w-5" />
               {loading
@@ -275,6 +270,18 @@ ${formData.message || t("لا توجد رسالة", "No message")}`;
                 : t("اطلب عرض السعر الآن", "Get a Quote Now")}
             </Button>
           </form>
+
+          {/* MAP رجعت 🔥 */}
+          <div className="bg-card rounded-2xl p-4 shadow-lg border border-white/5">
+            <iframe
+              title="map"
+              src="https://maps.google.com/maps?q=24.2884045,54.57407&z=16&output=embed"
+              width="100%"
+              height="320"
+              style={{ border: 0 }}
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
