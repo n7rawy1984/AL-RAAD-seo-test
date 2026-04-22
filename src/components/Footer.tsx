@@ -1,15 +1,7 @@
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useRouter, useRouterState } from "@tanstack/react-router";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const FooterComponent = () => {
   const router = useRouter();
@@ -40,6 +32,7 @@ const FooterComponent = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* ABOUT */}
           <div>
             <h3 className="text-2xl font-bold text-accent mb-4">
               {t("الرعد الثاقب", "ALRAAD ALTHAQEB")}
@@ -50,26 +43,53 @@ const FooterComponent = () => {
                 "Your trusted partner for high-quality diesel supply in the UAE",
               )}
             </p>
+
+            {/* SOCIAL */}
             <div className="flex gap-3">
-              <a href="https://www.facebook.com/alraad.diesel/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a
+                href="https://www.facebook.com/alraad.diesel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="Twitter" className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110">
+
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/in/ahmed-alraad-209157401/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110">
+
+              <a
+                href="https://www.linkedin.com/in/ahmed-alraad-209157401/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110">
+
+              {/* ✅ INSTAGRAM FIXED */}
+              <a
+                href="https://www.instagram.com/alraadalthaqeb/?hl=ar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-full bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
 
+          {/* LINKS */}
           <div>
-            <h4 className="text-lg font-bold mb-4">
-              {t("روابط سريعة", "Quick Links")}
-            </h4>
+            <h4 className="text-lg font-bold mb-4">{t("روابط سريعة", "Quick Links")}</h4>
             <ul className="space-y-2">
               {[
                 { id: "home", label: t("الرئيسية", "Home"), isPage: false },
@@ -91,10 +111,9 @@ const FooterComponent = () => {
             </ul>
           </div>
 
+          {/* SERVICES */}
           <div>
-            <h4 className="text-lg font-bold mb-4">
-              {t("خدماتنا", "Our Services")}
-            </h4>
+            <h4 className="text-lg font-bold mb-4">{t("خدماتنا", "Our Services")}</h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>{t("التوريد المباشر للمواقع", "Direct Site Delivery")}</li>
               <li>{t("تعبئة خزانات الشركات", "Company Tank Filling")}</li>
@@ -103,19 +122,26 @@ const FooterComponent = () => {
             </ul>
           </div>
 
+          {/* CONTACT */}
           <div>
-            <h4 className="text-lg font-bold mb-4">
-              {t("اتصل بنا", "Contact Us")}
-            </h4>
+            <h4 className="text-lg font-bold mb-4">{t("اتصل بنا", "Contact Us")}</h4>
             <div className="space-y-3">
-              <a href="tel:+971555677114" className="flex items-start gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
+              <a
+                href="tel:+971555677114"
+                className="flex items-start gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+              >
                 <Phone className="h-5 w-5 mt-1 flex-shrink-0" />
                 <span dir="ltr">+971 55 567 7114</span>
               </a>
-              <a href="mailto:alraad247@gmail.com" className="flex items-start gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
+
+              <a
+                href="mailto:alraad247@gmail.com"
+                className="flex items-start gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+              >
                 <Mail className="h-5 w-5 mt-1 flex-shrink-0" />
                 <span>alraad247@gmail.com</span>
               </a>
+
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="h-5 w-5 mt-1 flex-shrink-0" />
                 <span>
@@ -129,11 +155,13 @@ const FooterComponent = () => {
           </div>
         </div>
 
+        {/* FOOTER BOTTOM */}
         <div className="border-t border-primary-foreground/20 pt-6 grid md:grid-cols-2 gap-4">
           <div className="text-sm text-primary-foreground/70">
             <p>{t("رخصة تجارية رقم", "Trade License No.")}: 1376123</p>
             <p>{t("عضوية غرفة دبي", "Dubai Chamber Membership")}: 373631</p>
           </div>
+
           <div className="text-center md:text-end text-sm text-primary-foreground/70">
             <p>
               © {currentYear}{" "}
