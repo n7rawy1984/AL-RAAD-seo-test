@@ -83,9 +83,15 @@ const NavbarComponent = () => {
     }
   };
 
+  const pageRoutes: Record<string, { ar: string; en: string }> = {
+    blog: { ar: "/blog", en: "/en/blog" },
+    team: { ar: "/team", en: "/en/team" },
+  };
+
   const handleNavClick = (id: string, isPage: boolean) => {
     if (isPage) {
-      router.navigate({ to: isArabic ? "/blog" : "/en/blog" });
+      const routes = pageRoutes[id] ?? { ar: `/${id}`, en: `/en/${id}` };
+      router.navigate({ to: isArabic ? routes.ar : routes.en });
       setIsOpen(false);
     } else {
       if (pathname !== "/") {
@@ -103,6 +109,7 @@ const NavbarComponent = () => {
     { id: "services", label: t("خدماتنا", "Services"), isPage: false },
     { id: "sectors", label: t("القطاعات", "Sectors"), isPage: false },
     { id: "blog", label: t("المدونة", "Blog"), isPage: true },
+    { id: "team", label: t("فريق العمل", "Our Team"), isPage: true },
     { id: "contact", label: t("تواصل معنا", "Contact"), isPage: false },
   ];
 

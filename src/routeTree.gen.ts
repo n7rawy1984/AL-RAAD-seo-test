@@ -9,14 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TeamRouteImport } from './routes/team'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as EnTeamRouteImport } from './routes/en.team'
 import { Route as EnBlogRouteImport } from './routes/en.blog'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as EnBlogIndexRouteImport } from './routes/en.blog.index'
 import { Route as EnBlogSlugRouteImport } from './routes/en.blog.$slug'
 
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
@@ -31,6 +38,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => BlogRoute,
+} as any)
+const EnTeamRoute = EnTeamRouteImport.update({
+  id: '/en/team',
+  path: '/en/team',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EnBlogRoute = EnBlogRouteImport.update({
   id: '/en/blog',
@@ -56,15 +68,19 @@ const EnBlogSlugRoute = EnBlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
+  '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/en/blog': typeof EnBlogRouteWithChildren
+  '/en/team': typeof EnTeamRoute
   '/blog/': typeof BlogIndexRoute
   '/en/blog/$slug': typeof EnBlogSlugRoute
   '/en/blog/': typeof EnBlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en/team': typeof EnTeamRoute
   '/blog': typeof BlogIndexRoute
   '/en/blog/$slug': typeof EnBlogSlugRoute
   '/en/blog': typeof EnBlogIndexRoute
@@ -73,8 +89,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
+  '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/en/blog': typeof EnBlogRouteWithChildren
+  '/en/team': typeof EnTeamRoute
   '/blog/': typeof BlogIndexRoute
   '/en/blog/$slug': typeof EnBlogSlugRoute
   '/en/blog/': typeof EnBlogIndexRoute
@@ -84,19 +102,30 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/blog'
+    | '/team'
     | '/blog/$slug'
     | '/en/blog'
+    | '/en/team'
     | '/blog/'
     | '/en/blog/$slug'
     | '/en/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blog/$slug' | '/blog' | '/en/blog/$slug' | '/en/blog'
+  to:
+    | '/'
+    | '/team'
+    | '/blog/$slug'
+    | '/en/team'
+    | '/blog'
+    | '/en/blog/$slug'
+    | '/en/blog'
   id:
     | '__root__'
     | '/'
     | '/blog'
+    | '/team'
     | '/blog/$slug'
     | '/en/blog'
+    | '/en/team'
     | '/blog/'
     | '/en/blog/$slug'
     | '/en/blog/'
@@ -105,11 +134,20 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRouteWithChildren
+  TeamRoute: typeof TeamRoute
   EnBlogRoute: typeof EnBlogRouteWithChildren
+  EnTeamRoute: typeof EnTeamRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog': {
       id: '/blog'
       path: '/blog'
@@ -130,6 +168,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/en/team': {
+      id: '/en/team'
+      path: '/en/team'
+      fullPath: '/en/team'
+      preLoaderRoute: typeof EnTeamRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/en/blog': {
       id: '/en/blog'
@@ -190,7 +235,9 @@ const EnBlogRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
+  TeamRoute: TeamRoute,
   EnBlogRoute: EnBlogRouteWithChildren,
+  EnTeamRoute: EnTeamRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
