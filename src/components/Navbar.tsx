@@ -15,8 +15,10 @@ const NavbarComponent = () => {
 
   const isArabic = language === "ar";
 
+  // تبديل اللغة = الانتقال إلى المسار المقابل (ar/en)
   const toggleLanguage = () => {
     setLanguage(isArabic ? "en" : "ar");
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -41,8 +43,9 @@ const NavbarComponent = () => {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (pathname !== "/") {
-      setActive(pathname.startsWith("/blog") ? "blog" : "");
+    const isHome = pathname === "/" || pathname === "/en";
+    if (!isHome) {
+      setActive(pathname.includes("/blog") ? "blog" : pathname.includes("/team") ? "team" : "");
       return;
     }
 
@@ -94,8 +97,9 @@ const NavbarComponent = () => {
       router.navigate({ to: isArabic ? routes.ar : routes.en });
       setIsOpen(false);
     } else {
-      if (pathname !== "/") {
-        router.navigate({ to: "/" });
+      const homePath = isArabic ? "/" : "/en";
+      if (pathname !== homePath && pathname !== "/" && pathname !== "/en") {
+        router.navigate({ to: homePath });
         setTimeout(() => scrollToSection(id), 200);
       } else {
         scrollToSection(id);
@@ -191,9 +195,9 @@ const NavbarComponent = () => {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <Link
-            to="/"
+            to={isArabic ? "/" : "/en"}
             onClick={() => {
-              if (typeof window !== "undefined" && pathname === "/") {
+              if (typeof window !== "undefined" && (pathname === "/" || pathname === "/en")) {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }
             }}

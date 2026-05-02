@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EnIndexRouteImport } from './routes/en.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as EnTeamRouteImport } from './routes/en.team'
 import { Route as EnBlogRouteImport } from './routes/en.blog'
@@ -32,6 +33,11 @@ const BlogRoute = BlogRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnIndexRoute = EnIndexRouteImport.update({
+  id: '/en/',
+  path: '/en/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/en/blog': typeof EnBlogRouteWithChildren
   '/en/team': typeof EnTeamRoute
   '/blog/': typeof BlogIndexRoute
+  '/en/': typeof EnIndexRoute
   '/en/blog/$slug': typeof EnBlogSlugRoute
   '/en/blog/': typeof EnBlogIndexRoute
 }
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/en/team': typeof EnTeamRoute
   '/blog': typeof BlogIndexRoute
+  '/en': typeof EnIndexRoute
   '/en/blog/$slug': typeof EnBlogSlugRoute
   '/en/blog': typeof EnBlogIndexRoute
 }
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/en/blog': typeof EnBlogRouteWithChildren
   '/en/team': typeof EnTeamRoute
   '/blog/': typeof BlogIndexRoute
+  '/en/': typeof EnIndexRoute
   '/en/blog/$slug': typeof EnBlogSlugRoute
   '/en/blog/': typeof EnBlogIndexRoute
 }
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/en/blog'
     | '/en/team'
     | '/blog/'
+    | '/en/'
     | '/en/blog/$slug'
     | '/en/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -116,6 +126,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/en/team'
     | '/blog'
+    | '/en'
     | '/en/blog/$slug'
     | '/en/blog'
   id:
@@ -127,6 +138,7 @@ export interface FileRouteTypes {
     | '/en/blog'
     | '/en/team'
     | '/blog/'
+    | '/en/'
     | '/en/blog/$slug'
     | '/en/blog/'
   fileRoutesById: FileRoutesById
@@ -137,6 +149,7 @@ export interface RootRouteChildren {
   TeamRoute: typeof TeamRoute
   EnBlogRoute: typeof EnBlogRouteWithChildren
   EnTeamRoute: typeof EnTeamRoute
+  EnIndexRoute: typeof EnIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -160,6 +173,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/': {
+      id: '/en/'
+      path: '/en'
+      fullPath: '/en/'
+      preLoaderRoute: typeof EnIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -238,6 +258,7 @@ const rootRouteChildren: RootRouteChildren = {
   TeamRoute: TeamRoute,
   EnBlogRoute: EnBlogRouteWithChildren,
   EnTeamRoute: EnTeamRoute,
+  EnIndexRoute: EnIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

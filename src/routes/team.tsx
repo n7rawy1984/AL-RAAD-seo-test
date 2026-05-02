@@ -15,14 +15,16 @@ export const Route = createFileRoute("/team")({
       { property: "og:title", content: "فريق العمل | الرعد الثاقب لتجارة الديزل" },
       {
         property: "og:description",
-        content:
-          "تعرف على فريق الرعد الثاقب المتخصص في تجارة وتوريد الديزل في الإمارات.",
+        content: "تعرف على فريق الرعد الثاقب المتخصص في تجارة وتوريد الديزل في الإمارات.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${SITE_URL}/team` },
       { tagName: "link", rel: "canonical", href: `${SITE_URL}/team` },
       { tagName: "link", rel: "alternate", hrefLang: "ar", href: `${SITE_URL}/team` },
       { tagName: "link", rel: "alternate", hrefLang: "en", href: `${SITE_URL}/en/team` },
+      { rel: "alternate", hrefLang: "ar", href: `${SITE_URL}/team` },
+      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/en/team` },
+      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/team` },
     ],
   }),
   component: TeamPage,
@@ -91,9 +93,7 @@ function TeamPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            فريق العمل
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">فريق العمل</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             خلف كل قطرة ديزل تصل في الوقت المحدد، فريق محترف ملتزم بالجودة والكفاءة.
           </p>

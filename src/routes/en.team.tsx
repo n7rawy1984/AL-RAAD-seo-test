@@ -23,6 +23,9 @@ export const Route = createFileRoute("/en/team")({
       { tagName: "link", rel: "canonical", href: `${SITE_URL}/en/team` },
       { tagName: "link", rel: "alternate", hrefLang: "ar", href: `${SITE_URL}/team` },
       { tagName: "link", rel: "alternate", hrefLang: "en", href: `${SITE_URL}/en/team` },
+      { rel: "alternate", hrefLang: "ar", href: `${SITE_URL}/team` },
+      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/en/team` },
+      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/team` },
     ],
   }),
   component: EnTeamPage,
@@ -91,12 +94,10 @@ function EnTeamPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Our Team
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Team</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Behind every drop of diesel delivered on time, there's a dedicated team
-            committed to quality and efficiency.
+            Behind every drop of diesel delivered on time, there's a dedicated team committed to
+            quality and efficiency.
           </p>
           <div className="mt-4">
             <Link
@@ -154,7 +155,8 @@ function EnTeamPage() {
             Our In-House Digital Services
           </h2>
           <p className="text-center text-muted-foreground text-sm mb-8">
-            Mohamed Elnahrawy manages ALRAAD ALTHAQEB's full digital presence — from the website to paid campaigns.
+            Mohamed Elnahrawy manages ALRAAD ALTHAQEB's full digital presence — from the website to
+            paid campaigns.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {digitalServices.map((service) => (
